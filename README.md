@@ -32,13 +32,13 @@ out pi
 - A running program interacts with the run-time API which consumes results (output) produced by the program
   and provides access to an implementation of `Reducer` service (see below).
 - Ranges and sequences (aka mapped ranges) are lazy and consume a negligible amount of memory.
-  This means that range allocation and calling `map(sequence, lambda)` are very fast O(1) operations.
+  This means that range allocation and calling `map(sequence, lambda)` are very fast `O(1)` operations.
   Calling `toString()` on a large sequence is safe and produces an ellipsized representation.
   Expressions like `map({1, 10}, n -> {1, n})` create sequences of sequences.
 - The language contains only one blocking (potentially long-running) operation, 'reduce'.
-  Reduction can be executed using one of `Reducer` implementations. The IDE's run-time uses `ParallelReducer` which
-  executes computations on `ForkJoinPool.commonPool` in `O(N/M)` time, where N stands for the sequence length,
-  M for the number of available cores.
+  Reductions can be executed using one of `Reducer` implementations. The IDE's run-time uses `ParallelReducer` which
+  executes computations on `ForkJoinPool.commonPool` in `O(N/M)` time, where `N` stands for the sequence length,
+  `M` for the number of available cores.
   By default, the common pool uses all but one available CPU cores.
   The remaining core is normally enough for keeping the UI responsive.
   Reduction doesn't require any significant amount of memory and triggers very low (< 1 %) GC activity.
