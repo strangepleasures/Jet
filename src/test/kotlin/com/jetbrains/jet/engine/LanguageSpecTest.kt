@@ -13,12 +13,11 @@ import kotlin.test.assertFailsWith
 class LanguageSpecTest {
     @Test
     fun `Top level statements`() {
-        "".isValid()
-
         "out 2+3".isValid()
         "print \"abc\"".isValid()
         "var x = 2 + 3".isValid()
 
+        "".isInvalid()
         "2+3".isInvalid()
         "\"abc\"".isInvalid()
         "x y -> x + y".isInvalid()
