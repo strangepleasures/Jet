@@ -1,4 +1,4 @@
-# An interpreter an IDE for the Jet programming
+# An interpreter and an IDE for the Jet programming
 
 
 ## Grammar (pseud-BNF):
