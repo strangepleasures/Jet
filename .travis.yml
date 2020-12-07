@@ -3,6 +3,4 @@ dist: trusty
 git:
   depth: false
 
-install:
-  - npm install -g eclint
 
