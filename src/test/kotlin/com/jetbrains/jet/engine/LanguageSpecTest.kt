@@ -4,13 +4,13 @@ import com.nhaarman.mockitokotlin2.argThat
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
-import org.junit.Test
+import kotlin.test.Test
 import java.util.stream.Collectors
 import kotlin.Double.Companion.NaN
 import kotlin.Double.Companion.POSITIVE_INFINITY
 import kotlin.test.assertFailsWith
 
-class LanguageSpecTest {
+internal class LanguageSpecTest {
     @Test
     fun `Top level statements`() {
         "out 2+3".isValid()

@@ -47,3 +47,11 @@ out pi
 - Cancellation of a program immediately terminates all computational jobs and releases CPU resources.
   I started with a coroutine-based approach, got a working version, but it looked quite cumbersome,
   so I decided to rewrite it using Java Streams and `CompletableFuture` which worked very well.
+
+## Running the IDE
+
+Requires JDK 8+
+
+```
+./gradlew run
+```
