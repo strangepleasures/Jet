@@ -1,7 +1,7 @@
 # An interpreter and an IDE for the Jet programming
 
 
-## Grammar (pseud-BNF):
+## Grammar (pseudo-BNF):
 ```
 expr ::= expr op expr
   | (expr)
